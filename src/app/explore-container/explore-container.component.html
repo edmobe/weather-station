@@ -1,4 +1,30 @@
-<div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-</div>
+<ion-header [translucent]="false">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Weather Station
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Visualize weather parameters</ion-card-title>
+      <ion-card-subtitle>Analyze temprature, humidity and atmospheric pressure.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img src="https://media-manager.noticiasaominuto.com/1920/naom_5fa51b50ea7a2.jpg"
+        alt="image of plots and a magnifing glass">
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Visualize weather parameters</ion-card-title>
+      <ion-card-subtitle>Analyze temprature, humidity and atmospheric pressure.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img src="https://g1.nh.ee/images/pix/bfaff5b0ffbd1560a4-82503259.jpg"
+        alt="image of the sky">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

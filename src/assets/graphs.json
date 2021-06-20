@@ -1,0 +1,56 @@
+{
+    "opCode": 1,
+    "graphData": [
+        {
+            "parameter": "pressure",
+            "data": [
+                {
+                    "timestamp": "2-10-2021-10:20",
+                    "value": 10.5
+                },
+                {
+                    "timestamp": "2-10-2021-10:21",
+                    "value": 11.5
+                },
+                {
+                    "timestamp": "2-10-2021-10:22",
+                    "value": 10.8
+                }
+            ]
+        },
+        {
+            "parameter": "temperature",
+            "data": [
+                {
+                    "timestamp": "2-10-2021-10:20",
+                    "value": 21
+                },
+                {
+                    "timestamp": "2-10-2021-10:21",
+                    "value": 22
+                },
+                {
+                    "timestamp": "2-10-2021-10:22",
+                    "value": 21
+                }
+            ]
+        },
+        {
+            "parameter": "humidity",
+            "data": [
+                {
+                    "timestamp": "2-10-2021-10:20",
+                    "value": 10.5
+                },
+                {
+                    "timestamp": "2-10-2021-10:21",
+                    "value": 11.5
+                },
+                {
+                    "timestamp": "2-10-2021-10:22",
+                    "value": 10.8
+                }
+            ]
+        }
+    ]
+}
