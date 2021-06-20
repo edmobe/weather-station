@@ -1,7 +1,29 @@
 <ion-header [translucent]="false">
   <ion-toolbar color="primary">
     <ion-title>
-      Image
+      Weather conditions
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-spinner *ngIf="!loaded" class="ion-text-center"></ion-spinner>
+          <ion-card *ngIf="loaded">
+            <ion-card-header>
+              <ion-card-subtitle>{{state}}</ion-card-subtitle>
+              <ion-card-title>Weather prediction</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img id="gardenImage" [src]="imageSource" alt="Imagen del clima" />
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

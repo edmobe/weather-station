@@ -1,7 +1,20 @@
 <ion-header [translucent]="false">
   <ion-toolbar color="primary">
     <ion-title>
-      Plots
+      Weather parameters
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-spinner *ngIf="!loaded" class="ion-text-center"></ion-spinner>
+          <canvas *ngIf="loaded" #chart></canvas>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

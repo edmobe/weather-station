@@ -1,0 +1,15 @@
+<ion-header [translucent]="false">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="stacked" type="url">Weather station DNS</ion-label>
+    <ion-input [(ngModel)]="url"></ion-input>
+  </ion-item>
+  <ion-button color="primary" expand="block" (click)="updateUrl()">Update settings</ion-button>
+</ion-content>
