@@ -22,7 +22,7 @@ export class Tab2Page {
     return this.httpService.url;
   }
 
-  ngOnInit() {
+  ionViewDidEnter() {
     this.httpService.getGraph().subscribe((data: GraphRequest) => {
       this.data = data;
       // var graph1Data = data.graphData[0].data.sort(function sortDate(a, b) {

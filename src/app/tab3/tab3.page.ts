@@ -13,8 +13,10 @@ export class Tab3Page {
   state: string;
   imageSource = '../../assets/loading.gif';
 
-  constructor(httpService: HttpService) {
-    httpService.getImage().subscribe({
+  constructor(private httpService: HttpService) {}
+
+  ionViewDidEnter() {
+    this.httpService.getImage().subscribe({
       next: (imageRequest: ImageRequest) => {
         this.state = imageRequest.state;
         this.imageSource = 'data:image/png;base64,';

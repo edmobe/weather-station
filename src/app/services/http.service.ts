@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { GraphRequest } from '../models/graph-request';
 
@@ -6,7 +6,11 @@ import { GraphRequest } from '../models/graph-request';
   providedIn: 'root',
 })
 export class HttpService {
-  url = 'http://4780cd263fa9.ngrok.io';
+  url = 'http://46a55eaddae1.ngrok.io';
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   constructor(private http: HttpClient) {}
 
