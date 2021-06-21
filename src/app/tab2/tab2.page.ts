@@ -25,21 +25,21 @@ export class Tab2Page {
   ionViewDidEnter() {
     this.httpService.getGraph().subscribe((data: GraphRequest) => {
       this.data = data;
-      // var graph1Data = data.graphData[0].data.sort(function sortDate(a, b) {
-      //   return new Date(b.timestamp) < new Date(a.timestamp) ?  1 // if b should come earlier, push a to end
-      //    : new Date(b.timestamp) > new Date(a.timestamp) ? -1 // if b should come later, push a to begin
-      //    : 0;                   // a and b are equal
-      // });
-      // var graph2Data = data.graphData[1].data.sort(function sortDate(a, b) {
-      //   return new Date(b.timestamp) < new Date(a.timestamp) ?  1 // if b should come earlier, push a to end
-      //    : new Date(b.timestamp) > new Date(a.timestamp) ? -1 // if b should come later, push a to begin
-      //    : 0;                   // a and b are equal
-      // });
-      // var graph3Data = data.graphData[2].data.sort(function sortDate(a, b) {
-      //   return new Date(b.timestamp) < new Date(a.timestamp) ?  1 // if b should come earlier, push a to end
-      //    : new Date(b.timestamp) > new Date(a.timestamp) ? -1 // if b should come later, push a to begin
-      //    : 0;                   // a and b are equal
-      // });
+      var graph1Data = data.graphData[0].data.sort(function sortDate(a, b) {
+        return new Date(b.timestamp) < new Date(a.timestamp) ?  1 // if b should come earlier, push a to end
+         : new Date(b.timestamp) > new Date(a.timestamp) ? -1 // if b should come later, push a to begin
+         : 0;                   // a and b are equal
+      });
+      var graph2Data = data.graphData[1].data.sort(function sortDate(a, b) {
+        return new Date(b.timestamp) < new Date(a.timestamp) ?  1 // if b should come earlier, push a to end
+         : new Date(b.timestamp) > new Date(a.timestamp) ? -1 // if b should come later, push a to begin
+         : 0;                   // a and b are equal
+      });
+      var graph3Data = data.graphData[2].data.sort(function sortDate(a, b) {
+        return new Date(b.timestamp) < new Date(a.timestamp) ?  1 // if b should come earlier, push a to end
+         : new Date(b.timestamp) > new Date(a.timestamp) ? -1 // if b should come later, push a to begin
+         : 0;                   // a and b are equal
+      });
 
       if (data.opCode == 1) {
         var chart1Labels = [];
@@ -49,7 +49,7 @@ export class Tab2Page {
         var chart3Labels = [];
         var chart3Values = [];
 
-        data.graphData[0].data.forEach((element) => {
+        graph1Data.forEach((element) => {
           chart1Labels.push(new Date(element.timestamp).toLocaleString(undefined, {
             month: 'short',
             day: 'numeric',
@@ -59,7 +59,7 @@ export class Tab2Page {
           chart1Values.push(element.value);
         });
 
-        data.graphData[1].data.forEach((element) => {
+        graph2Data.forEach((element) => {
           chart2Labels.push(new Date(element.timestamp).toLocaleString(undefined, {
             month: 'short',
             day: 'numeric',
@@ -69,7 +69,7 @@ export class Tab2Page {
           chart2Values.push(element.value);
         });
 
-        data.graphData[2].data.forEach((element) => {
+        graph3Data.forEach((element) => {
           chart3Labels.push(new Date(element.timestamp).toLocaleString(undefined, {
             month: 'short',
             day: 'numeric',
