@@ -19,9 +19,9 @@ export class StorageService {
     );
   }
 
-  async setUrl(value: any) {
+  async setUrl(value: string) {
     this.httpService.setUrl(value);
-    return this._storage?.set('url', value);
+    return this._storage.set('url', value);
   }
 
   async getUrl() {

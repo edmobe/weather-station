@@ -6,7 +6,7 @@ import { GraphRequest } from '../models/graph-request';
   providedIn: 'root',
 })
 export class HttpService {
-  url = 'https://b53b5d7d4e44.ngrok.io';
+  url = 'http://4780cd263fa9.ngrok.io';
 
   constructor(private http: HttpClient) {}
 
@@ -15,7 +15,7 @@ export class HttpService {
   }
 
   getGraph() {
-    const requestUrl = `${this.url}/get_sensorValues`;
+    const requestUrl = `${this.url}/get_sensor_values`;
     return this.http.get<GraphRequest>(requestUrl);
   }
 

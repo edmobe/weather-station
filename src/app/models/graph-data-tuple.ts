@@ -1,4 +1,4 @@
 export interface GraphDataTuple {
-    timestamp: string;
+    timestamp: Date;
     value: number;
 }
