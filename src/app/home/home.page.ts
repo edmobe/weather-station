@@ -13,5 +13,4 @@ export class HomePage {
   navigateTo(input: string): void {
     this.router.navigateByUrl(input);
   }
-
 }

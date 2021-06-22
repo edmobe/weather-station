@@ -8,10 +8,6 @@ import { GraphRequest } from '../models/graph-request';
 export class HttpService {
   url = 'http://46a55eaddae1.ngrok.io';
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
-
   constructor(private http: HttpClient) {}
 
   setUrl(url: string): void {
